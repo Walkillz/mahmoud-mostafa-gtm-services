@@ -36,9 +36,15 @@
   nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,13,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 0}
   nav .wrap{display:flex;justify-content:space-between;align-items:center}
   .nav-name{font-family:'Playfair Display',serif;font-size:1.15rem}
-  .nav-links{display:flex;gap:24px}
+  .nav-name a{color:var(--text);text-decoration:none;transition:color .3s}
+  .nav-name a:hover{color:var(--accent)}
+  .nav-links{display:flex;gap:24px;align-items:center}
   .nav-links a{color:var(--text2);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.03em;transition:color .3s}
   .nav-links a:hover{color:var(--accent)}
+  .nav-tab{display:inline-flex;gap:4px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:3px}
+  .nav-tab a{padding:6px 14px;border-radius:6px;font-size:.78rem;font-weight:600;letter-spacing:.04em;color:var(--text2);text-decoration:none;transition:all .3s}
+  .nav-tab a:hover{color:var(--text)}
+  .nav-tab a.active{background:var(--grad);color:#fff}
 
   /* Hero */
   .hero{padding:140px 0 80px}
@@ -156,8 +162,12 @@
 
 <nav>
   <div class="wrap">
-    <div class="nav-name">Mahmoud Mostafa</div>
+    <div class="nav-name"><a href="index.html">Mahmoud Mostafa</a></div>
     <div class="nav-links">
+      <div class="nav-tab">
+        <a href="index.html" class="active">Outbound & Pipeline</a>
+        <a href="ecommerce.html">Ecommerce Brands</a>
+      </div>
       <a href="#approach">Approach</a>
       <a href="#outbound">Outbound System</a>
       <a href="#research">Research & AI</a>
