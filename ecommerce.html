@@ -92,66 +92,84 @@
   .email-body{padding:0}
   .email-frame{width:100%;background:#ffffff;color:#1a1a1a;font-family:'DM Sans',sans-serif}
 
+  /* Shared email components */
+  .em-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 32px;border-bottom:1px solid #f0f0f0}
+  .em-nav .em-logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.1rem;color:#1a1a1a;letter-spacing:.02em}
+  .em-nav .em-menu{display:flex;gap:18px}
+  .em-nav .em-menu span{font-size:.72rem;color:#888;font-weight:500;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+  .em-hero-img{width:100%;height:340px;object-fit:cover;display:block}
+  .em-hero-overlay{position:relative}
+  .em-hero-overlay .em-overlay-text{position:absolute;bottom:0;left:0;right:0;padding:40px 32px 32px;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+  .em-hero-overlay .em-overlay-text h2{font-family:'Playfair Display',serif;font-size:1.6rem;color:#fff;margin-bottom:4px}
+  .em-hero-overlay .em-overlay-text p{color:rgba(255,255,255,.8);font-size:.85rem}
+  .em-content{padding:32px}
+  .em-content h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:#1a1a1a;margin-bottom:10px}
+  .em-content p{color:#555;font-size:.85rem;line-height:1.75;margin-bottom:16px}
+  .em-divider{height:1px;background:#f0f0f0;margin:8px 0 20px}
+  .em-cta{display:inline-block;padding:12px 32px;border-radius:6px;font-weight:600;font-size:.85rem;text-decoration:none;text-align:center;letter-spacing:.03em;cursor:pointer}
+  .em-cta-wrap{text-align:center;margin:24px 0 8px}
+  .em-footer{padding:24px 32px;text-align:center;font-size:.7rem;color:#aaa;border-top:1px solid #f0f0f0}
+  .em-footer a{color:#888;text-decoration:underline}
+  .em-social{display:flex;justify-content:center;gap:16px;margin-bottom:12px}
+  .em-social span{width:28px;height:28px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#888}
+
   /* Shoes Email */
-  .shoes-email .email-hero{background:linear-gradient(135deg,#1a1a2e,#16213e);padding:48px 32px;text-align:center}
-  .shoes-email .email-hero h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:#fff;margin-bottom:8px;letter-spacing:.02em}
-  .shoes-email .email-hero p{color:rgba(255,255,255,.7);font-size:.9rem;margin-bottom:24px}
-  .shoes-email .shoe-display{display:flex;justify-content:center;align-items:center;gap:12px;margin:20px 0}
-  .shoes-email .shoe-box{width:140px;height:140px;background:linear-gradient(145deg,#2a2a4a,#1a1a3e);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;box-shadow:0 8px 32px rgba(0,0,0,.3)}
-  .shoes-email .shoe-box.featured{width:160px;height:160px;background:linear-gradient(145deg,#4a8eff,#7b5cfc);font-size:4rem;box-shadow:0 12px 40px rgba(74,142,255,.3)}
-  .shoes-email .price-tag{display:inline-block;background:linear-gradient(135deg,#4a8eff,#7b5cfc);color:#fff;padding:8px 24px;border-radius:24px;font-weight:700;font-size:1.1rem;margin-top:16px}
-  .shoes-email .email-content{padding:36px 32px;background:#fff}
-  .shoes-email .email-content h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:#1a1a2e;margin-bottom:12px}
-  .shoes-email .email-content p{color:#555;font-size:.88rem;line-height:1.7;margin-bottom:16px}
-  .shoes-email .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
-  .shoes-email .feature-item{text-align:center;padding:16px 8px;background:#f8f9ff;border-radius:10px}
-  .shoes-email .feature-item .fi-icon{font-size:1.4rem;margin-bottom:6px}
-  .shoes-email .feature-item .fi-label{font-size:.72rem;color:#666;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
-  .shoes-email .cta-btn{display:block;text-align:center;background:#1a1a2e;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.9rem;margin:20px auto 0;max-width:250px}
-  .shoes-email .email-footer{padding:24px 32px;background:#f4f5f9;text-align:center;font-size:.75rem;color:#999}
+  .shoes-email .em-nav{background:#0d0d0d;border-bottom:1px solid #222}
+  .shoes-email .em-nav .em-logo{color:#fff}
+  .shoes-email .em-nav .em-menu span{color:#777}
+  .shoes-email .em-hero-img{height:380px;object-position:center 30%}
+  .shoes-email .em-overlay-text{background:linear-gradient(transparent 0%,rgba(0,0,0,.85) 100%) !important}
+  .shoes-email .em-overlay-text .em-preheader{font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.5);margin-bottom:8px;font-weight:600}
+  .shoes-email .em-content{background:#0d0d0d;color:#eee;padding:32px}
+  .shoes-email .em-content h3{color:#fff}
+  .shoes-email .em-content p{color:#999}
+  .shoes-email .em-features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+  .shoes-email .em-feature{text-align:center;padding:20px 12px;background:#161616;border:1px solid #222;border-radius:8px}
+  .shoes-email .em-feature .ef-num{font-family:'JetBrains Mono',monospace;font-size:1.4rem;font-weight:600;color:#fff;margin-bottom:4px}
+  .shoes-email .em-feature .ef-label{font-size:.68rem;color:#666;text-transform:uppercase;letter-spacing:.08em;font-weight:500}
+  .shoes-email .em-cta{background:#fff;color:#0d0d0d}
+  .shoes-email .em-footer{background:#0d0d0d;border-top:1px solid #222;color:#555}
+  .shoes-email .em-social span{background:#1a1a1a;color:#555}
 
   /* Sunscreen Email */
-  .sunscreen-email .email-hero{background:linear-gradient(135deg,#ff9a56,#ff6b35);padding:48px 32px;text-align:center;position:relative;overflow:hidden}
-  .sunscreen-email .email-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:rgba(255,255,255,.1);border-radius:50%}
-  .sunscreen-email .email-hero::after{content:'';position:absolute;bottom:-40px;left:-40px;width:150px;height:150px;background:rgba(255,255,255,.08);border-radius:50%}
-  .sunscreen-email .email-hero h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:#fff;margin-bottom:8px;position:relative;z-index:1}
-  .sunscreen-email .email-hero p{color:rgba(255,255,255,.85);font-size:.9rem;margin-bottom:20px;position:relative;z-index:1}
-  .sunscreen-email .sun-display{display:flex;justify-content:center;align-items:end;gap:16px;margin:20px 0;position:relative;z-index:1}
-  .sunscreen-email .sun-product{text-align:center}
-  .sunscreen-email .sun-bottle{width:90px;height:130px;background:linear-gradient(180deg,#fff8e1,#ffecb3);border-radius:14px 14px 8px 8px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;box-shadow:0 6px 20px rgba(0,0,0,.15);position:relative;margin:0 auto 8px}
-  .sunscreen-email .sun-bottle.main{width:110px;height:155px;background:linear-gradient(180deg,#ffffff,#fff3e0);font-size:3rem;box-shadow:0 10px 30px rgba(0,0,0,.2)}
-  .sunscreen-email .spf-badge{position:absolute;top:-8px;right:-8px;background:#ff6b35;color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.55rem;font-weight:800;line-height:1}
-  .sunscreen-email .sun-label{font-size:.7rem;color:rgba(255,255,255,.9);font-weight:600}
-  .sunscreen-email .email-content{padding:36px 32px;background:#fff}
-  .sunscreen-email .email-content h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:#2d1b00;margin-bottom:12px}
-  .sunscreen-email .email-content p{color:#555;font-size:.88rem;line-height:1.7;margin-bottom:16px}
-  .sunscreen-email .benefit-list{list-style:none;padding:0;margin:20px 0}
-  .sunscreen-email .benefit-list li{padding:10px 0;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;gap:10px;font-size:.88rem;color:#444}
-  .sunscreen-email .benefit-list li::before{content:'';width:24px;height:24px;background:#fff3e0;border-radius:50%;flex-shrink:0}
-  .sunscreen-email .cta-btn{display:block;text-align:center;background:linear-gradient(135deg,#ff9a56,#ff6b35);color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.9rem;margin:20px auto 0;max-width:250px}
-  .sunscreen-email .email-footer{padding:24px 32px;background:#fff9f4;text-align:center;font-size:.75rem;color:#999}
+  .sunscreen-email .em-nav{background:#f7fafa;border-bottom:1px solid #e8f0f0}
+  .sunscreen-email .em-nav .em-logo{color:#1a6b6b}
+  .sunscreen-email .em-nav .em-menu span{color:#7aabab}
+  .sunscreen-email .em-hero-img{height:320px;object-position:center center}
+  .sunscreen-email .em-banner{background:linear-gradient(135deg,#e0f7f7,#b2dfdb);padding:28px 32px;text-align:center}
+  .sunscreen-email .em-banner h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:#1a6b6b;margin-bottom:6px}
+  .sunscreen-email .em-banner p{font-size:.85rem;color:#4a8a8a}
+  .sunscreen-email .em-badge{display:inline-block;background:#1a6b6b;color:#fff;padding:4px 14px;border-radius:20px;font-size:.68rem;font-weight:700;letter-spacing:.08em;margin-top:10px}
+  .sunscreen-email .em-content{background:#fff}
+  .sunscreen-email .em-benefits{margin:20px 0}
+  .sunscreen-email .em-benefit{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #f5f5f5}
+  .sunscreen-email .em-benefit:last-child{border-bottom:none}
+  .sunscreen-email .em-benefit-icon{width:36px;height:36px;border-radius:50%;background:#e0f7f7;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .sunscreen-email .em-benefit-icon svg{width:16px;height:16px;color:#1a6b6b}
+  .sunscreen-email .em-benefit-text{font-size:.82rem;color:#444}
+  .sunscreen-email .em-benefit-text strong{color:#1a6b6b}
+  .sunscreen-email .em-cta{background:#1a6b6b;color:#fff}
+  .sunscreen-email .em-footer{background:#f7fafa;border-top:1px solid #e8f0f0}
+  .sunscreen-email .em-social span{background:#e0f7f7;color:#1a6b6b}
 
   /* Sunglasses Email */
-  .sunglasses-email .email-hero{background:linear-gradient(135deg,#0a0a0a,#1a1a2e);padding:48px 32px;text-align:center;position:relative}
-  .sunglasses-email .email-hero::before{content:'';position:absolute;top:20px;left:50%;transform:translateX(-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(218,165,32,.15),transparent 70%);pointer-events:none}
-  .sunglasses-email .email-hero h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:#fff;margin-bottom:8px;position:relative;z-index:1}
-  .sunglasses-email .email-hero p{color:rgba(255,255,255,.6);font-size:.9rem;margin-bottom:24px;position:relative;z-index:1}
-  .sunglasses-email .glasses-display{display:flex;justify-content:center;gap:20px;margin:20px 0;position:relative;z-index:1}
-  .sunglasses-email .glass-item{text-align:center}
-  .sunglasses-email .glass-frame{width:120px;height:80px;background:linear-gradient(145deg,#2a2a2a,#1a1a1a);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;box-shadow:0 6px 20px rgba(0,0,0,.4);border:1px solid rgba(218,165,32,.2);margin:0 auto 8px}
-  .sunglasses-email .glass-frame.gold{background:linear-gradient(145deg,#2a2515,#1a1a0a);border-color:rgba(218,165,32,.4);box-shadow:0 8px 30px rgba(218,165,32,.15)}
-  .sunglasses-email .glass-label{font-size:.7rem;color:rgba(255,255,255,.5);letter-spacing:.05em}
-  .sunglasses-email .glass-price{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:rgba(218,165,32,.8);margin-top:4px}
-  .sunglasses-email .email-content{padding:36px 32px;background:#fff}
-  .sunglasses-email .email-content h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:#1a1a1a;margin-bottom:12px}
-  .sunglasses-email .email-content p{color:#555;font-size:.88rem;line-height:1.7;margin-bottom:16px}
-  .sunglasses-email .style-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
-  .sunglasses-email .style-card{padding:16px;background:#fafaf5;border-radius:10px;border:1px solid #f0f0e8}
-  .sunglasses-email .style-card .sc-icon{font-size:1.5rem;margin-bottom:6px}
-  .sunglasses-email .style-card .sc-name{font-weight:600;font-size:.85rem;color:#1a1a1a;margin-bottom:2px}
-  .sunglasses-email .style-card .sc-desc{font-size:.72rem;color:#888}
-  .sunglasses-email .cta-btn{display:block;text-align:center;background:linear-gradient(135deg,#1a1a1a,#0a0a0a);color:#daa520;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:.9rem;margin:20px auto 0;max-width:250px;border:1px solid rgba(218,165,32,.3)}
-  .sunglasses-email .email-footer{padding:24px 32px;background:#fafaf5;text-align:center;font-size:.75rem;color:#999}
+  .sunglasses-email .em-nav{background:#0a0a08;border-bottom:1px solid rgba(218,165,32,.15)}
+  .sunglasses-email .em-nav .em-logo{color:#daa520;letter-spacing:.1em}
+  .sunglasses-email .em-nav .em-menu span{color:#666}
+  .sunglasses-email .em-hero-img{height:400px;object-position:center center}
+  .sunglasses-email .em-overlay-text{background:linear-gradient(transparent 0%,rgba(0,0,0,.8) 100%) !important}
+  .sunglasses-email .em-overlay-text .em-preheader{font-size:.6rem;text-transform:uppercase;letter-spacing:.2em;color:rgba(218,165,32,.7);margin-bottom:8px;font-weight:600}
+  .sunglasses-email .em-content{background:#0a0a08;color:#ddd;padding:32px}
+  .sunglasses-email .em-content h3{color:#fff;font-size:1.15rem}
+  .sunglasses-email .em-content p{color:#888}
+  .sunglasses-email .em-specs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}
+  .sunglasses-email .em-spec{padding:18px;background:#111110;border:1px solid rgba(218,165,32,.1);border-radius:8px}
+  .sunglasses-email .em-spec .es-label{font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:#666;margin-bottom:4px;font-weight:600}
+  .sunglasses-email .em-spec .es-value{font-size:.88rem;color:#daa520;font-weight:600}
+  .sunglasses-email .em-cta{background:transparent;color:#daa520;border:1.5px solid #daa520}
+  .sunglasses-email .em-gold-line{height:1px;background:linear-gradient(90deg,transparent,rgba(218,165,32,.3),transparent);margin:4px 0 24px}
+  .sunglasses-email .em-footer{background:#0a0a08;border-top:1px solid rgba(218,165,32,.1);color:#555}
+  .sunglasses-email .em-social span{background:#111110;color:#daa520;border:1px solid rgba(218,165,32,.15)}
 
   /* Strategy section */
   .strategy{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:28px}
@@ -188,11 +206,10 @@
     .nav-links{display:none}
     .nav-tab{display:flex}
     .mg{grid-template-columns:repeat(2,1fr)}
-    .shoes-email .feature-grid{grid-template-columns:1fr}
-    .sunglasses-email .style-grid{grid-template-columns:1fr}
-    .shoes-email .shoe-display{flex-direction:column;align-items:center}
-    .sunscreen-email .sun-display{flex-direction:column;align-items:center}
-    .sunglasses-email .glasses-display{flex-direction:column;align-items:center}
+    .shoes-email .em-features{grid-template-columns:1fr}
+    .sunglasses-email .em-specs{grid-template-columns:1fr}
+    .em-nav .em-menu{display:none}
+    .em-hero-img{height:240px !important}
     .strategy{grid-template-columns:1fr}
     .results-row{justify-content:center}
   }
@@ -247,38 +264,55 @@
         </div>
         <div class="email-body">
           <div class="email-frame shoes-email">
-            <div class="email-hero">
-              <h2>The Future of Running</h2>
-              <p>Introducing the AeroStride X1 Collection</p>
-              <div class="shoe-display">
-                <div class="shoe-box">&#128095;</div>
-                <div class="shoe-box featured">&#128094;</div>
-                <div class="shoe-box">&#128096;</div>
+            <!-- Nav bar -->
+            <div class="em-nav">
+              <div class="em-logo">STEPFORWARD</div>
+              <div class="em-menu">
+                <span>New</span>
+                <span>Men</span>
+                <span>Women</span>
+                <span>Sale</span>
               </div>
-              <div class="price-tag">Starting at $129</div>
             </div>
-            <div class="email-content">
-              <h3>Engineered for Performance</h3>
-              <p>The AeroStride X1 combines cutting-edge cushioning technology with a breathable knit upper that adapts to your foot. Whether you're chasing PRs or logging easy miles, this is the shoe that does it all.</p>
-              <div class="feature-grid">
-                <div class="feature-item">
-                  <div class="fi-icon">&#9889;</div>
-                  <div class="fi-label">Energy Return</div>
+            <!-- Hero image -->
+            <div class="em-hero-overlay">
+              <img src="patrick-mueller-n-J3ZyJLPjs-unsplash.jpg" alt="Premium running sneakers at sunset" class="em-hero-img">
+              <div class="em-overlay-text">
+                <div class="em-preheader">Just Dropped</div>
+                <h2>The AeroStride X1</h2>
+                <p>Performance running. Redefined.</p>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="em-content">
+              <h3>Engineered for Those Who Push Limits</h3>
+              <p>The AeroStride X1 combines cutting-edge cushioning technology with a breathable knit upper that adapts to your stride. Whether you're chasing PRs or logging easy miles — this is the shoe that does it all.</p>
+              <div class="em-features">
+                <div class="em-feature">
+                  <div class="ef-num">38%</div>
+                  <div class="ef-label">More Energy Return</div>
                 </div>
-                <div class="feature-item">
-                  <div class="fi-icon">&#127744;</div>
-                  <div class="fi-label">Ultra Light</div>
+                <div class="em-feature">
+                  <div class="ef-num">7.2oz</div>
+                  <div class="ef-label">Ultra Lightweight</div>
                 </div>
-                <div class="feature-item">
-                  <div class="fi-icon">&#128170;</div>
-                  <div class="fi-label">Max Support</div>
+                <div class="em-feature">
+                  <div class="ef-num">100%</div>
+                  <div class="ef-label">Recycled Knit</div>
                 </div>
               </div>
-              <a class="cta-btn">Shop the Collection &#8594;</a>
+              <div class="em-cta-wrap">
+                <span class="em-cta">SHOP THE COLLECTION</span>
+              </div>
+              <p style="text-align:center;color:#555;font-size:.75rem;margin-top:12px">Free shipping on orders over $75 | Easy 30-day returns</p>
             </div>
-            <div class="email-footer">
-              StepForward Inc. | Free shipping on orders over $75<br>
-              <span style="color:#bbb">Unsubscribe | View in browser</span>
+            <!-- Footer -->
+            <div class="em-footer">
+              <div class="em-social">
+                <span>IG</span><span>TW</span><span>FB</span>
+              </div>
+              StepForward Inc. | 142 Innovation Drive, Portland, OR 97201<br>
+              <a>Unsubscribe</a> &nbsp;|&nbsp; <a>View in browser</a> &nbsp;|&nbsp; <a>Privacy Policy</a>
             </div>
           </div>
         </div>
@@ -288,22 +322,22 @@
         <div class="strat-item">
           <div class="strat-n">Strategy 01</div>
           <div class="strat-t">Visual-First Hero</div>
-          <div class="strat-d">Bold product imagery above the fold to immediately communicate the premium quality and design aesthetic.</div>
+          <div class="strat-d">Full-bleed lifestyle product photography above the fold to immediately communicate premium quality and design aesthetic.</div>
         </div>
         <div class="strat-item">
           <div class="strat-n">Strategy 02</div>
-          <div class="strat-t">Feature Anchoring</div>
-          <div class="strat-d">Three-column feature grid to quickly communicate key product benefits without overwhelming text.</div>
+          <div class="strat-t">Data-Driven Features</div>
+          <div class="strat-d">Stat-based feature grid using numbers (38%, 7.2oz) to quantify benefits — more credible than generic claims.</div>
         </div>
         <div class="strat-item">
           <div class="strat-n">Strategy 03</div>
-          <div class="strat-t">Price Psychology</div>
-          <div class="strat-d">"Starting at" pricing in a prominent badge to lower perceived barrier and drive initial click-through.</div>
+          <div class="strat-t">Dark Theme Authority</div>
+          <div class="strat-d">Dark email design inspired by Nike/On Running to position the product as performance-grade and premium.</div>
         </div>
         <div class="strat-item">
           <div class="strat-n">Strategy 04</div>
-          <div class="strat-t">Single CTA Focus</div>
-          <div class="strat-d">One clear call-to-action to eliminate decision fatigue and funnel all attention to the product page.</div>
+          <div class="strat-t">Friction Reducers</div>
+          <div class="strat-d">Free shipping and easy returns messaging placed directly below CTA to remove last-second purchase hesitation.</div>
         </div>
       </div>
 
@@ -338,41 +372,66 @@
         </div>
         <div class="email-body">
           <div class="email-frame sunscreen-email">
-            <div class="email-hero">
-              <h2>Your Summer Glow Starts Here</h2>
-              <p>Clean protection. All-day confidence.</p>
-              <div class="sun-display">
-                <div class="sun-product">
-                  <div class="sun-bottle">&#127774;</div>
-                  <div class="sun-label">Body Mist</div>
-                </div>
-                <div class="sun-product">
-                  <div class="sun-bottle main">
-                    &#9728;&#65039;
-                    <div class="spf-badge">SPF 50+</div>
-                  </div>
-                  <div class="sun-label">Daily Shield</div>
-                </div>
-                <div class="sun-product">
-                  <div class="sun-bottle">&#127754;</div>
-                  <div class="sun-label">After Sun</div>
-                </div>
+            <!-- Nav bar -->
+            <div class="em-nav">
+              <div class="em-logo">SolShield</div>
+              <div class="em-menu">
+                <span>Shop</span>
+                <span>Ingredients</span>
+                <span>Our Story</span>
               </div>
             </div>
-            <div class="email-content">
-              <h3>Protection Meets Clean Beauty</h3>
-              <p>SolShield's reef-safe formula gives you broad-spectrum SPF 50+ protection without the white cast, harsh chemicals, or heavy feel. Made with zinc oxide, vitamin E, and aloe vera.</p>
-              <ul class="benefit-list">
-                <li>Reef-safe &amp; ocean-friendly formula</li>
-                <li>No white cast — blends in 10 seconds</li>
-                <li>Water-resistant up to 80 minutes</li>
-                <li>Dermatologist tested for sensitive skin</li>
-              </ul>
-              <a class="cta-btn">Shop Sun Protection &#9728;&#65039;</a>
+            <!-- Banner -->
+            <div class="em-banner">
+              <h2>Your Summer Glow Starts Here</h2>
+              <p>Clean protection. All-day confidence.</p>
+              <div class="em-badge">SPF 50+ BROAD SPECTRUM</div>
             </div>
-            <div class="email-footer">
+            <!-- Hero image -->
+            <img src="batch-by-wisconsin-hemp-scientific-XanILp6v_Eg-unsplash.jpg" alt="Applying sunscreen by the pool" class="em-hero-img" style="height:280px;object-position:center center">
+            <!-- Content -->
+            <div class="em-content">
+              <h3>Protection Meets Clean Beauty</h3>
+              <p>SolShield's reef-safe formula gives you broad-spectrum SPF 50+ protection without the white cast, harsh chemicals, or heavy feel. Made with zinc oxide, vitamin E, and aloe vera for skin that feels as good as it's protected.</p>
+              <div class="em-divider"></div>
+              <div class="em-benefits">
+                <div class="em-benefit">
+                  <div class="em-benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l3 3 5-5"/></svg>
+                  </div>
+                  <div class="em-benefit-text"><strong>Reef-safe</strong> &amp; ocean-friendly — no harmful chemicals</div>
+                </div>
+                <div class="em-benefit">
+                  <div class="em-benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l3 3 5-5"/></svg>
+                  </div>
+                  <div class="em-benefit-text"><strong>Zero white cast</strong> — blends invisibly in seconds</div>
+                </div>
+                <div class="em-benefit">
+                  <div class="em-benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l3 3 5-5"/></svg>
+                  </div>
+                  <div class="em-benefit-text"><strong>Water-resistant</strong> up to 80 minutes of activity</div>
+                </div>
+                <div class="em-benefit">
+                  <div class="em-benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#1a6b6b" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l3 3 5-5"/></svg>
+                  </div>
+                  <div class="em-benefit-text"><strong>Dermatologist tested</strong> — safe for sensitive skin</div>
+                </div>
+              </div>
+              <div class="em-cta-wrap">
+                <span class="em-cta">SHOP SUN PROTECTION</span>
+              </div>
+              <p style="text-align:center;color:#7aabab;font-size:.75rem;margin-top:12px">Use code SUMMER20 for 20% off your first order</p>
+            </div>
+            <!-- Footer -->
+            <div class="em-footer">
+              <div class="em-social">
+                <span>IG</span><span>TT</span><span>PI</span>
+              </div>
               SolShield Beauty | Cruelty-free &amp; reef-safe since 2021<br>
-              <span style="color:#bbb">Unsubscribe | View in browser</span>
+              <a>Unsubscribe</a> &nbsp;|&nbsp; <a>View in browser</a> &nbsp;|&nbsp; <a>Privacy Policy</a>
             </div>
           </div>
         </div>
@@ -387,17 +446,17 @@
         <div class="strat-item">
           <div class="strat-n">Strategy 02</div>
           <div class="strat-t">Trust Signals</div>
-          <div class="strat-d">Benefit checklist format to quickly overcome common objections (white cast, chemicals, reef safety).</div>
+          <div class="strat-d">Checkmark benefit list to quickly overcome common objections (white cast, chemicals, reef safety).</div>
         </div>
         <div class="strat-item">
           <div class="strat-n">Strategy 03</div>
-          <div class="strat-t">Product Family</div>
-          <div class="strat-d">Showcasing the full product line to increase average order value through complementary product discovery.</div>
+          <div class="strat-t">Lifestyle Photography</div>
+          <div class="strat-d">Real product-in-use image builds trust and helps the customer visualize the product in their own routine.</div>
         </div>
         <div class="strat-item">
           <div class="strat-n">Strategy 04</div>
-          <div class="strat-t">Warm Color Psychology</div>
-          <div class="strat-d">Orange-amber palette evokes sunshine and warmth, reinforcing the brand's summer positioning and energy.</div>
+          <div class="strat-t">Discount Code Hook</div>
+          <div class="strat-d">Promo code below CTA adds a final incentive to convert first-time buyers with lower risk.</div>
         </div>
       </div>
 
@@ -432,57 +491,59 @@
         </div>
         <div class="email-body">
           <div class="email-frame sunglasses-email">
-            <div class="email-hero">
-              <h2>The Gold Standard</h2>
-              <p>Introducing the 24K Gold-Accent Collection</p>
-              <div class="glasses-display">
-                <div class="glass-item">
-                  <div class="glass-frame">&#128374;</div>
-                  <div class="glass-label">Aviator</div>
-                  <div class="glass-price">$289</div>
-                </div>
-                <div class="glass-item">
-                  <div class="glass-frame gold">&#128526;</div>
-                  <div class="glass-label">Navigator</div>
-                  <div class="glass-price">$349</div>
-                </div>
-                <div class="glass-item">
-                  <div class="glass-frame">&#127758;</div>
-                  <div class="glass-label">Explorer</div>
-                  <div class="glass-price">$269</div>
-                </div>
+            <!-- Nav bar -->
+            <div class="em-nav">
+              <div class="em-logo">LUXFRAME</div>
+              <div class="em-menu">
+                <span>Collection</span>
+                <span>Heritage</span>
+                <span>Atelier</span>
               </div>
             </div>
-            <div class="email-content">
+            <!-- Hero image -->
+            <div class="em-hero-overlay">
+              <img src="jonathan-borba-reiwBhNJQS0-unsplash.jpg" alt="Man wearing premium sunglasses" class="em-hero-img">
+              <div class="em-overlay-text">
+                <div class="em-preheader">Limited Edition</div>
+                <h2>The Gold Standard</h2>
+                <p>24K Gold-Accent Collection — Limited to 500 pieces</p>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="em-content">
+              <div class="em-gold-line"></div>
               <h3>Crafted for Those Who Lead</h3>
-              <p>Each pair in the Gold Collection features hand-polished 24K gold accents, polarized Italian lenses, and lightweight titanium frames. Limited to 500 pieces worldwide.</p>
-              <div class="style-grid">
-                <div class="style-card">
-                  <div class="sc-icon">&#128142;</div>
-                  <div class="sc-name">24K Gold Accents</div>
-                  <div class="sc-desc">Hand-applied gold details on temple and bridge</div>
+              <p>Each pair in the Gold Collection features hand-polished 24K gold accents, polarized Italian lenses, and lightweight titanium frames. Designed in our Milan atelier. Numbered and authenticated.</p>
+              <div class="em-specs">
+                <div class="em-spec">
+                  <div class="es-label">Lenses</div>
+                  <div class="es-value">Polarized Zeiss UV400</div>
                 </div>
-                <div class="style-card">
-                  <div class="sc-icon">&#127470;&#127481;</div>
-                  <div class="sc-name">Italian Lenses</div>
-                  <div class="sc-desc">Polarized Zeiss optics with UV400 protection</div>
+                <div class="em-spec">
+                  <div class="es-label">Frame</div>
+                  <div class="es-value">Grade-5 Titanium</div>
                 </div>
-                <div class="style-card">
-                  <div class="sc-icon">&#9878;&#65039;</div>
-                  <div class="sc-name">Titanium Build</div>
-                  <div class="sc-desc">Ultra-light frame at only 22 grams</div>
+                <div class="em-spec">
+                  <div class="es-label">Weight</div>
+                  <div class="es-value">Only 22 Grams</div>
                 </div>
-                <div class="style-card">
-                  <div class="sc-icon">&#127919;</div>
-                  <div class="sc-name">Limited Run</div>
-                  <div class="sc-desc">Only 500 numbered pieces produced</div>
+                <div class="em-spec">
+                  <div class="es-label">Edition</div>
+                  <div class="es-value">500 Numbered Pieces</div>
                 </div>
               </div>
-              <a class="cta-btn">Reserve Your Pair &#8594;</a>
+              <div class="em-cta-wrap">
+                <span class="em-cta">RESERVE YOUR PAIR</span>
+              </div>
+              <p style="text-align:center;color:#555;font-size:.72rem;margin-top:12px;letter-spacing:.03em">Complimentary engraving &amp; leather case included</p>
             </div>
-            <div class="email-footer">
+            <!-- Footer -->
+            <div class="em-footer">
+              <div class="em-social">
+                <span>IG</span><span>TW</span><span>LI</span>
+              </div>
               LuxFrame | Handcrafted luxury eyewear since 2019<br>
-              <span style="color:#bbb">Unsubscribe | View in browser</span>
+              <a>Unsubscribe</a> &nbsp;|&nbsp; <a>View in browser</a> &nbsp;|&nbsp; <a>Privacy Policy</a>
             </div>
           </div>
         </div>
@@ -501,13 +562,13 @@
         </div>
         <div class="strat-item">
           <div class="strat-n">Strategy 03</div>
-          <div class="strat-t">Price Anchoring</div>
-          <div class="strat-d">Showing three price points with the featured item in the middle guides customers to the hero product.</div>
+          <div class="strat-t">Specification Grid</div>
+          <div class="strat-d">Material and craftsmanship specs justify the premium price by communicating tangible quality markers.</div>
         </div>
         <div class="strat-item">
           <div class="strat-n">Strategy 04</div>
-          <div class="strat-t">Craftsmanship Story</div>
-          <div class="strat-d">Detail-focused feature grid builds perceived value by highlighting materials, origin, and manufacturing quality.</div>
+          <div class="strat-t">Value-Add Close</div>
+          <div class="strat-d">Complimentary engraving and leather case below CTA adds perceived value and sweetens the deal at checkout.</div>
         </div>
       </div>
 
