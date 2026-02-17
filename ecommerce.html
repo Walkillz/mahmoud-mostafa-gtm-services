@@ -128,6 +128,19 @@
   .shoes-email .em-feature .ef-num{font-family:'JetBrains Mono',monospace;font-size:1.4rem;font-weight:600;color:#fff;margin-bottom:4px}
   .shoes-email .em-feature .ef-label{font-size:.68rem;color:#666;text-transform:uppercase;letter-spacing:.08em;font-weight:500}
   .shoes-email .em-cta{background:#fff;color:#0d0d0d}
+  .shoes-email .em-products{padding:32px;background:#0d0d0d;border-top:1px solid #222}
+  .shoes-email .em-products h3{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff;margin-bottom:6px;text-align:center}
+  .shoes-email .em-products .em-products-sub{font-size:.78rem;color:#666;text-align:center;margin-bottom:20px}
+  .shoes-email .em-product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .shoes-email .em-product-card{background:#161616;border:1px solid #222;border-radius:8px;overflow:hidden;text-align:center;transition:border-color .3s}
+  .shoes-email .em-product-card:hover{border-color:#444}
+  .shoes-email .em-product-card img{width:100%;height:160px;object-fit:cover;display:block}
+  .shoes-email .em-product-info{padding:14px 10px}
+  .shoes-email .em-product-name{font-size:.78rem;font-weight:600;color:#fff;margin-bottom:2px}
+  .shoes-email .em-product-variant{font-size:.65rem;color:#555;margin-bottom:8px}
+  .shoes-email .em-product-price{font-family:'JetBrains Mono',monospace;font-size:.88rem;font-weight:600;color:#fff;margin-bottom:10px}
+  .shoes-email .em-product-btn{display:inline-block;padding:7px 18px;border:1px solid #444;border-radius:4px;font-size:.68rem;font-weight:600;color:#ccc;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .3s}
+  .shoes-email .em-product-btn:hover{border-color:#fff;color:#fff}
   .shoes-email .em-footer{background:#0d0d0d;border-top:1px solid #222;color:#555}
   .shoes-email .em-social span{background:#1a1a1a;color:#555}
 
@@ -229,6 +242,8 @@
     .nav-tab{display:flex}
     .mg{grid-template-columns:repeat(2,1fr)}
     .shoes-email .em-features{grid-template-columns:1fr}
+    .shoes-email .em-product-grid{grid-template-columns:1fr}
+    .shoes-email .em-product-card img{height:200px}
     .sunglasses-email .em-specs{grid-template-columns:1fr}
     .casino-email .em-features-row{grid-template-columns:1fr}
     .em-nav .em-menu{display:none}
@@ -328,6 +343,40 @@
                 <span class="em-cta">SHOP THE COLLECTION</span>
               </div>
               <p style="text-align:center;color:#555;font-size:.75rem;margin-top:12px">Free shipping on orders over $75 | Easy 30-day returns</p>
+            </div>
+            <!-- Product Grid -->
+            <div class="em-products">
+              <h3>More From the Collection</h3>
+              <p class="em-products-sub">Complete your rotation — top picks from the AeroStride line</p>
+              <div class="em-product-grid">
+                <div class="em-product-card">
+                  <img src="product-sneaker-white.jpg" alt="AeroStride Classic in white">
+                  <div class="em-product-info">
+                    <div class="em-product-name">AeroStride Classic</div>
+                    <div class="em-product-variant">Cloud White / Navy</div>
+                    <div class="em-product-price">$129</div>
+                    <span class="em-product-btn">Shop Now</span>
+                  </div>
+                </div>
+                <div class="em-product-card">
+                  <img src="product-sneaker-red.jpg" alt="AeroStride X1 Pro in infrared">
+                  <div class="em-product-info">
+                    <div class="em-product-name">AeroStride X1 Pro</div>
+                    <div class="em-product-variant">Infrared / Black</div>
+                    <div class="em-product-price">$169</div>
+                    <span class="em-product-btn">Shop Now</span>
+                  </div>
+                </div>
+                <div class="em-product-card">
+                  <img src="product-sneaker-dark.jpg" alt="AeroStride Retro in olive">
+                  <div class="em-product-info">
+                    <div class="em-product-name">AeroStride Retro</div>
+                    <div class="em-product-variant">Olive / Sail / Black</div>
+                    <div class="em-product-price">$149</div>
+                    <span class="em-product-btn">Shop Now</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- Footer -->
             <div class="em-footer">
